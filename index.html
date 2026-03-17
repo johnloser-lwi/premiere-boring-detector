@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boring Detector</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>BORING DETECTOR</h1>
+  </div>
+
+  <!-- Sensitivity -->
+  <div class="section">
+    <div class="section-label">Sensitivity (gap threshold)</div>
+    <div class="slider-row">
+      <input type="range" id="sensitivity" min="1" max="30" value="5" step="0.5" aria-label="Sensitivity (gap threshold in seconds)"/>
+      <span class="slider-value"><span id="sensitivity-display">5</span>s</span>
+    </div>
+  </div>
+
+  <!-- Track Selector -->
+  <div class="section">
+    <div class="tracks-header">
+      <div class="section-label">Tracks</div>
+      <button type="button" id="btn-refresh-tracks" title="Refresh track list">↻</button>
+    </div>
+    <div class="track-actions">
+      <button type="button" id="select-all-tracks">Select All</button>
+      <button type="button" id="deselect-all-tracks">Deselect All</button>
+    </div>
+    <div id="track-list">
+      <span class="track-placeholder">Loading tracks…</span>
+    </div>
+  </div>
+
+  <!-- Marker Color -->
+  <div class="section">
+    <div class="section-label">Marker Color</div>
+    <div id="color-swatches"></div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="button-row">
+    <button type="button" id="btn-analyze">Analyze</button>
+    <button type="button" id="btn-clear">Clear Markers</button>
+  </div>
+
+  <!-- Status -->
+  <div id="status-msg"></div>
+
+  <!-- Results -->
+  <div class="results-header">
+    <div class="section-label">Results</div>
+    <span id="result-count"></span>
+  </div>
+  <ul id="results-list">
+    <li class="empty-state">No analysis run yet.</li>
+  </ul>
+
+  <script src="js/CSInterface.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

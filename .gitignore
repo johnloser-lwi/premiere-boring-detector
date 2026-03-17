@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code
+.claude/
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# CEP debug logs
+.debug
+
+# Node (if tooling is added later)
+node_modules/
+npm-debug.log*
+
+# Build artifacts
+dist/
+*.zip
